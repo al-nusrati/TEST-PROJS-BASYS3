@@ -1,0 +1,39 @@
+# --- Vivado Project Files (KEEP THESE) ---
+# Do NOT add *.xpr or *.xdc to the ignore list!
+
+# --- Vivado Generated (IGNORE THESE) ---
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.xil/
+*.Xil/
+*.hw/
+*.runs/
+*.bit
+*.bin
+*.ltx
+*.jou
+*.log
+*.str
+*.csv
+*.pb
+*.dmp
+*.rpt
+*.backup
+*.backup*
+*.str
+.tmp/
+*.hbs/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.vs/
