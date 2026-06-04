@@ -1,0 +1,13 @@
+project_01_SWLED
+project_02_multiplexer
+project_02b_multiplexer
+project_05_pipelined_XOR
+project_06_finite_state_machine
+project_09_SequentialLogicCounter
+
+
+CipherX8
+CipherX8_02
+FullAdder_8bit
+Z_7Segment_02
+
