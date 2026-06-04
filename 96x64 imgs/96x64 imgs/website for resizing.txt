@@ -1,0 +1,36 @@
+Image resizing	(select 3:2)
+	https://redketchup.io/image-resizer
+	Note: In section "Resize Image", adjust Scale Percentage and Resize Dimensions + save as BMP
+
+to 16 bit BMP
+	https://online-converting.com/image/convert2bmp/#
+	Note: set 16 color (5-6-5)
+
+to .mem
+	install pip libaray for python -->	pip install pillow
+	Save the Python script in file "convert_to_mem.py"
+	Change files names in script
+	Run script --> python convert_to_mem.py
+
+
+--------------------------------
+from PIL import Image
+
+# Open the image
+img = Image.open("image.bmp")  # <-- Change this to your BMP file
+
+# Convert to RGB565
+img = img.convert("RGB")
+pixels = img.load()
+
+# Open the .mem file for writing
+with open("image.mem", "w") as f:   # <-- Change output file name if desired
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b = pixels[x, y]
+            # Convert to RGB565
+            rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3)
+            # Write to file
+            f.write(f"{rgb565:04X}\n")
+
+
